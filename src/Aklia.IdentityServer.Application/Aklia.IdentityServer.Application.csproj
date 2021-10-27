@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aklia.Shared\Aklia.Shared.csproj" />
+    <ProjectReference Include="..\Aklia.Swagger\Aklia.Swagger.csproj" />
+  </ItemGroup>
+
+</Project>

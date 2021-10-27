@@ -1,0 +1,6 @@
+/src/Aklia.IdentityServer.Application/bin
+/src/Aklia.IdentityServer.Application/obj
+/src/Aklia.Shared/obj
+/src/Aklia.Shared/bin
+/src/Aklia.Swagger/bin
+/src/Aklia.Swagger/obj
