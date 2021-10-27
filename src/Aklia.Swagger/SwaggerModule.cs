@@ -30,7 +30,7 @@ namespace Aklia.Swagger
                     {
                         Name = "Aklia.IdentityServer.Application",
                         Email = "1983810978@qq.com",
-                        Url = new System.Uri("https://github.com/YANGKANG01/QuartzNetJob")
+                        Url = new System.Uri("http://www.identityserver.com.cn/")
                     }
                 });
 
