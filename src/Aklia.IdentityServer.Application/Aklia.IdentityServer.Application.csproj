@@ -9,4 +9,12 @@
     <ProjectReference Include="..\Aklia.Swagger\Aklia.Swagger.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+  </ItemGroup>
+
 </Project>

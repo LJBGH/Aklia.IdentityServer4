@@ -1,3 +1,4 @@
+using Aklia.IdentityServer.Application.Identitys;
 using Aklia.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,9 +26,15 @@ namespace Aklia.IdentityServer.Application
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerService();
+
+            //注入IdentityServer服务
+            services.AddIdentityServer()
+                .AddDeveloperSigningCredential()
+                .AddInMemoryApiResources(Config.GetApiResources())
+                .AddInMemoryClients(Config.GetClients())
+                .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>();//注入自定义登录验证
         }
 
 
@@ -39,6 +46,9 @@ namespace Aklia.IdentityServer.Application
             }
 
             app.UseSwaggerService();
+
+            //添加 认证中间件
+            app.UseIdentityServer();
 
             app.UseRouting();
 
